@@ -113,6 +113,9 @@ So then the there will be too much correction -> TOO CONSERVATIVE / More Type II
 - We cannot just look at p-value and see if study is significant
 - Need to find out how much "hunting" they did
 - There is a trade-off between **false discoveries** (FP) and **missing real effects** (FN)
+
+$$FDR = \frac{FP}{FP + TP}$$
+
 - **LESS STRICT** than Bonferroni Correction
   - It is a method to control the **Expected Proportion of False Positives** instead of the probability of **one or more** false positives
 
