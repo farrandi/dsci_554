@@ -179,6 +179,14 @@ pwr.t.test(
 )
 ```
 
+<img src="images/3_t_plot.png" width="600">
+
+_Lower power means need less sample size_
+
+<img src="images/3_ab_size_plot.png" width="600">
+
+_Higher response increase means more power for a given sample size_
+
 ### Block Homogeneity and Power
 
 - We want to ensure that the blocks are **homogeneous**:
