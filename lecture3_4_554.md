@@ -120,7 +120,7 @@ Sorted Best to Worst:
    - **covariate**: a variable that is possibly predictive of the response variable
 3. Raw model with no blocking nor Post-Hoc adjustments
 
-### Increasing Sample Size
+## Increasing Sample Size
 
 - Increasing sample size would:
   - Increase the **accuracy** of the estimates
@@ -132,26 +132,28 @@ Sorted Best to Worst:
 - Using covariate and blocking would still be more precise
 - Need to consider that increasing sample size is also expensive
 
-#### Power in Sample Size Computations
+### Power in Sample Size Computations
 
 - Recall that sample size computations involve playing around with three concepts:
   1. **effect size**: how much we want the experimental treatment to differ from the control treatment in terms of the mean response
   2. **significance level** $\alpha$
      - Lower = more strict (less prone to Type I error/ false positive)
+     - $P(\text{reject } H_0 | H_0 \text{ is true}) = \alpha$
   3. **power** of the test $1 - \beta = 1 - P(\text{Type II error})$,
      - Typically 0.8
      - larger = less prone to Type II error
+     - $P(\text{reject } H_0 | H_a \text{ is true}) = 1 - \beta = 1 - P(\text{accept } H_0 | H_a \text{ is true})$
 
 <img src="images/0_stat_chart.png" width="500">
 
-| Decision      | True Condition Positive        | True Condition Negative       |
-| ------------- | ------------------------------ | ----------------------------- |
-| Test Positive | Correct (True Positive)        | Type I Error (False Positive) |
-| Test Negative | Type II Error (False Negative) | Correct (True Negative)       |
+| Decision                     | True Condition Positive ($H_a$ True) | True Condition Negative ($H_0$ True) |
+| ---------------------------- | ------------------------------------ | ------------------------------------ |
+| Test Positive (Reject $H_0$) | Correct (True Positive)              | Type I Error (False Positive)        |
+| Test Negative (Accept $H_0$) | Type II Error (False Negative)       | Correct (True Negative)              |
 
 _see more in [my statistical inference notes](https://mds.farrandi.com/block_2/552_stat_inter/552_stat_inter.html#visual-representation-of-errors)_
 
-##### Example case
+#### Example case
 
 - Lets say we want to see if changeing website design from "X" to "Y" will increase the average time spent on the website.
 - We know:
