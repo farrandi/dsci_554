@@ -12,11 +12,6 @@ Want to address causality from:
 
 - Recall [552 Hypothesis Testing](https://mds.farrandi.com/block_2/552_stat_inter/552_stat_inter#hypothesis-testing)
 
-|                      | $H_0$ is True                | $H_0$ is False                |
-| -------------------- | ---------------------------- | ----------------------------- |
-| Fail to Reject $H_0$ | Correct (True Neg)           | Type II Error (**False Neg**) |
-| Reject $H_0$         | Type I Error (**False Pos**) | Correct (True Pos)            |
-
 - Tolerance to **Type I Error** is $\alpha$
   - $\alpha = P(\text{reject null} | \text{null is true})$
   - Reject $H_0$ when $p < \alpha$
