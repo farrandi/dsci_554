@@ -1,5 +1,12 @@
 # Lecture 2: Confounding and Randomized vs Non-Randomized Studies
 
+## Observational vs Experimental Studies
+
+- **Experimental**: The researcher **manipulates** the independent variable and observes the effect on the dependent variable.
+  - E.g See if new gym class reduces body fat percentage, so **randomly assign** people to new and old class
+- **Observational**: The researcher observes the effect of the independent variable on the dependent variable without manipulating the independent variable.
+  - E.g. See if new gym class reduces body fat percentage, so **select** people who signed up for new and old class
+
 ## Simpson's Paradox
 
 - Arises when the association/trend between two variables is reversed when a third variable (**confounder**) is taken into account
@@ -7,12 +14,13 @@
 
 <img src="images/2_sp_eg.png" width="500">
 
-### Cofounding Factors
+### Confounding Factors
 
 - Criteria to be a confounder:
   1. Related to the outcome by prognosis/ susceptibility
   2. the distribution of the confounding factor is different in the groups being compared
-- Cofounder is related to both the exposure and the outcome
+- Confounder is a variable related to both the explanatory and response variables
+- Important to consider because without considering them, we may unkowingly observe a false demonstration of an association or the masking of an association between the explanatory and response variables.
 
 <img src="images/2_cofounder.png" width="200">
 
@@ -23,6 +31,7 @@
    - **Drawback**: need to know all possible confounders
 2. **Analysis of Variance (ANOVA)**: good for experimental data
    - Randomize each subject to a level of $X$
+     - **Randomization** breaks the dependency between exploratory/ response variables and confounders
    - Then compare $Y$ across levels of $X$
      </br>
 

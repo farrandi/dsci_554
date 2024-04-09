@@ -132,10 +132,11 @@ $$FDR = \frac{FP}{FP + TP}$$
 pval_corrected = p.adjust(pval, method = "fdr")
 ```
 
-### When to Use Bonferroni vs. FDR
+### When to Use FWER vs. FDR
 
-| Bonferroni                          | FDR                                    |
+| FWER                                | FDR                                    |
 | ----------------------------------- | -------------------------------------- |
 | When there is high confidence to TP | When there is certain proportion of FP |
 | Want to be conservative             | Want to be less conservative           |
 | Prefer **False Negatives**          | Prefer **False Positives**             |
+| `TukeyHSD`                          | `pairwise.prop.test(method="BH")`      |
