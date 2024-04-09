@@ -1,12 +1,5 @@
 # Lecture 2: Confounding and Randomized vs Non-Randomized Studies
 
-## Observational vs Experimental Studies
-
-- **Experimental**: The researcher **manipulates** the independent variable and observes the effect on the dependent variable.
-  - E.g See if new gym class reduces body fat percentage, so **randomly assign** people to new and old class
-- **Observational**: The researcher observes the effect of the independent variable on the dependent variable without manipulating the independent variable.
-  - E.g. See if new gym class reduces body fat percentage, so **select** people who signed up for new and old class
-
 ## Simpson's Paradox
 
 - Arises when the association/trend between two variables is reversed when a third variable (**confounder**) is taken into account

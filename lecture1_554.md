@@ -5,8 +5,16 @@ Want to address causality from:
 - Randomized studies
   - Can **randomly** allocate control (placebo) and treatment groups
 - Non-randomized studies
+
   - Treatment randomization is impossible
   - Need to apply statistical methods to address it
+
+## Observational vs Experimental Studies
+
+- **Experimental**: The researcher **manipulates** the independent variable and observes the effect on the dependent variable.
+  - E.g See if new gym class reduces body fat percentage, so **randomly assign** people to new and old class
+- **Observational**: The researcher observes the effect of the independent variable on the dependent variable without manipulating the independent variable.
+  - E.g. See if new gym class reduces body fat percentage, so **select** people who signed up for new and old class
 
 ## Hypothesis Testing Review
 
