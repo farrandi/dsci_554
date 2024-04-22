@@ -12,7 +12,7 @@
   - Create artificial population by "cloning subjects"
     - This is done using the estimated model from (previous reperesentative sample) + induced random noise
     - AKA Proxy Ground Truth
-- CC is useful when %Y=1 is rare and sampling is costly
+- CC is useful when $Y=1$ is rare and sampling is costly
 
 ### CC Matching
 
@@ -22,6 +22,7 @@
 - Sample $n/2$ cases then $n/2$ controls
   - Keep Case:Control ratio = 1
   - Match **exactly** on the confounder to the case counterpart
+    - e.g. case has confounder $C_1=1$, then control must have $C_1=1$
 - **Important**: Cannot fit Binary Logistic Regression model since we have matched pairs
   - Can get a sparse data problem
   - Use **McNemar's Test** instead

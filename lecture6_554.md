@@ -36,7 +36,6 @@ glm(Y ~ X, data = data, family = binomial) |>
 
 - Turn a continous confounder (e.g. age) into discrete categories and add to the model
   - `data |> mutate(age_bins = cut(age, breaks = c(min(age), quantile(age, (1:3) / 4), max(age)), include.lowest = TRUE)`
-- Ask about that^ (not sure how)
 - By making **stratum-specific inference** with multiple confounders, we aim to infer causality between X and Y
   - However, there will be few observations in each strata (not enough data)
   - **Solution**: use binomial logistic regression (**Overall Model-Based Inference**) with interaction terms
@@ -50,15 +49,15 @@ _recall: odds ratio is $exp(\beta)$ where $\beta$ is the coefficient/ estimate_
 
 #### Assumptions for Causal Model-based Inference (binary logistic regression)
 
-1. Simple/ smooth structure in how the Y-specific log-OR varies across the strata
+1. **Simple/ smooth structure in how the Y-specific log-OR varies across the strata**
    - Check using ANOVA comparing the simple model (all additive terms) and the complex model (with interaction terms of all confounders with each other)
    - `complex_model <- glm(Y ~ X + C1 * C2, data = data, family = binomial)`
    - `anova(simple_model, complex_model, test = "LRT")`
-2. Strength of $(X, Y)$ association is constant across the strata (i.e. no interaction between X and C)
+2. **Strength of $(X, Y)$ association is constant across the strata** (i.e. no interaction between X and C)
    - complex model: all simple terms + double interactions of X and confounders
    - `complex_model_c1 <- glm(Y ~ X + C1 + C2 + X:C1, data = data, family = binomial)`
    - `complex_model_c2 <- glm(Y ~ X + C1 + C2 + X:C2, data = data, family = binomial)`
    - Compare all models with simple model using ANOVA
-3. No unmeasured confounders (All confounders are included in the model)
+3. **No unmeasured confounders** (All confounders are included in the model)
    - Add new model with unmeasured confounder
    - `new_model <- glm(Y ~ X + C1 + C2 + CU, data = data, family = binomial)` where CU is the unmeasured confounder
