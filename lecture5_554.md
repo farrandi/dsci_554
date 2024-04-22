@@ -13,7 +13,7 @@
 - No need $\sigma$ nor $\mu$ for proportion test
 - Need to know the effect size $h$ (difference in proportions)
   - Use `ES.h(data_control, data_treatment)` to calculate
-- Effect sie has an **arcsine transformation**:
+- Effect size has an **arcsine transformation**:
 
 $$h = 2 \arcsin(\sqrt{p_Y}) - 2 \arcsin(\sqrt{p_X})$$
 
@@ -64,7 +64,7 @@ We can see that we need more sample size when:
 
 </br>
 
-- **Aggresive Peeking**: look at the data after evert new experimental unit
+- **Aggresive Peeking**: look at the data after every new experimental unit
   - If test $P_Y > P_X$ (and in fact it is true), aggressive peeking will improve power of the test if:
     - $P_Y > 1.5 * P_X$
     - Otherwise, it gives a concerning power decrease
